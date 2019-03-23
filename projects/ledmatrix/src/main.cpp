@@ -1,7 +1,6 @@
 #include <Arduino.h>
-#include <SPI.h>
-#include <LedMatrix.h>
 
+#include <LedMatrix.h>
 
 #define NUMBER_OF_DEVICES 1 //number of led matrix connect in series
 
@@ -12,16 +11,27 @@
 
 LedMatrix ledMatrix = LedMatrix(NUMBER_OF_DEVICES, CLK_PIN, MISO_PIN, MOSI_PIN, CS_PIN);
   
-boolean face[8][8] = {
+bool happy_face[8][8] = {
+    {0,0,0,0,0,0,0,0},
+    {0,1,1,0,0,1,1,0},
+    {0,1,1,0,0,1,1,0},
     {0,0,0,0,0,0,0,0},
     {0,0,0,0,0,0,0,0},
     {0,1,0,0,0,0,1,0},
-    {0,0,0,1,1,0,0,0},
-    {0,0,0,1,1,0,0,0},
-    {1,0,0,0,0,0,0,1},
-    {0,1,1,1,1,1,1,0},
-    {0,0,0,1,1,0,0,0}
-  };
+    {0,0,1,1,1,1,0,0},
+    {0,0,0,0,0,0,0,0}
+};
+
+bool sad_face[8][8] = {
+    {0,0,0,0,0,0,0,0},
+    {0,1,1,0,0,1,1,0},
+    {0,1,1,0,0,1,1,0},
+    {0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0},
+    {0,0,1,1,1,1,0,0},
+    {0,1,0,0,0,0,1,0},
+    {0,0,0,0,0,0,0,0}
+};
 
 void setup() {
   ledMatrix.init();
@@ -30,8 +40,17 @@ void setup() {
 void loop() {
   ledMatrix.clear();
   ledMatrix.commit();
-  delay(250);
-  ledMatrix.tekenMatrix(face);
+  delay(500);
+
+  ledMatrix.tekenMatrix(happy_face);
   ledMatrix.commit();
-  delay(250);
+  delay(500);
+
+  ledMatrix.clear();
+  ledMatrix.commit();
+  delay(500);
+
+  ledMatrix.tekenMatrix(sad_face);
+  ledMatrix.commit();
+  delay(500);
 }
