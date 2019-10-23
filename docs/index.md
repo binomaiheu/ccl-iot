@@ -11,7 +11,6 @@ Wij zijn codeclub lochristi...
 hmm
 
 ## Sponsors
-
 - vito
 - combell
 - ablynx
