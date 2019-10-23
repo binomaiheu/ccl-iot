@@ -1,8 +1,12 @@
 <nav class="nav-primary" role="navigation" >
     <ul>
         {% for p in site.html_pages %}
-        <li>
-            <a href="{{ site.baseurl }}{{ p.url }}" class="button">{{ p.title }}</a>
+        <li> 
+            {% if p.url == page.url %}
+            :: <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a> ::
+            {% else %}
+            :: {{ p.title }} ::
+            {% endif %} 
         </li>
         {% endfor %}
     </ul>
