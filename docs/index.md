@@ -14,4 +14,3 @@ hmm
 - vito
 - combell
 - ablynx
-- ...
