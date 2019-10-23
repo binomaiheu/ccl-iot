@@ -1,5 +1,6 @@
-# ccl-iot
+# Codeclub Lochristi
 
-CodeClub Lochristi IoT projects
+This is the git repository for CodeClub Lochristi
 
-This repository contains a number of IoT project for the CodeClub
+* See [website](https://binomaiheu.github.io/codeclublochristi/)
+
