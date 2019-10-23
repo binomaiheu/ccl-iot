@@ -1,5 +1,25 @@
 {% include head.html %}
-<h1>{{ page.title }}</h1>
-{{ content }}
-{% include nav.html %}
+
+<header>
+  <div class="inner">
+    <a href="{{ '/' | absolute_url }}">
+      <h1>{{ site.title | default: site.github.repository_name }}</h1>
+    </a>
+    <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+    <a href="{{ site.github.repository_url }}" class="button"><small>View project on</small> GitHub</a>
+  </div>
+</header>
+
+<div id="content-wrapper">
+  <div class="inner clearfix">
+    <section id="main-content">
+      {{ content }}
+    </section>
+
+    <aside id="sidebar">
+      {% include nav.html %}
+    </aside>
+  </div>
+</div>
+
 {% include foot.html %}
