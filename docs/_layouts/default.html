@@ -17,13 +17,19 @@
     </section>
 
     <aside id="sidebar">
+        <h1>Navigation</h1>
+        <ul>
         {% for p in site.html_pages %} 
             {% if p.url == page.url %}
-                <h1><b>:: {{ p.title }} ::</b></h1><br />
+                <li><h2><b>{{ p.title }}</b></h2></li>
             {% else %}
-                <h1>:: <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a> ::</h1><br />
+                <li><h2><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></h2></li>
             {% endif %} 
         {% endfor %}
+        </ul>
+
+        <h1>Contact</h1>
+        Voor meer info, contacteer Bino
     </aside>
   </div>
 </div>

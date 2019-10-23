@@ -9,9 +9,6 @@ title: Home
 Wij zijn codeclub lochristi... 
 
 
-## Projecten
-hmm
-
 ## Sponsors
 - vito
 - combell
