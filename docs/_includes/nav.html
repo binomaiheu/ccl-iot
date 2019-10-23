@@ -3,9 +3,9 @@
         {% for p in site.html_pages %}
         <li> 
             {% if p.url == page.url %}
-            :: {{ p.title }} ::
+            <h1><b>:: {{ p.title }} ::</b></h1>
             {% else %}
-            :: <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a> ::
+            <h1>:: <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a> ::</h1>
             {% endif %} 
         </li>
         {% endfor %}
