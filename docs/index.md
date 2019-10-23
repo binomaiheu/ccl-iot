@@ -1,4 +1,20 @@
----
-layout: default
-title: Home
----
+# CodeClub Lochristi
+
+## About
+Wij zijn codeclub lochristi... 
+
+## Workshops
+
+- donderdag
+- vrijdag
+- zaterdag
+
+## Projecten
+hmm
+
+## Sponsors
+
+- vito
+- combell
+- ablynx
+- ...
