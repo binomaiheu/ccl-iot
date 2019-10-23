@@ -1,4 +1,7 @@
-# CodeClub Lochristi
+---
+layout: default
+title: Home
+---
 
 ## About
 Wij zijn codeclub lochristi... 
